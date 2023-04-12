@@ -59,12 +59,8 @@
             // make API call with parameters and use promises to get response
             fetch("https://0nin9cbzbk.execute-api.ap-southeast-2.amazonaws.com/dev", requestOptions)
             .then(response => response.text())
-            .then(result =>{ 
-                document.getElementById('result').innerHTML=json.parse(result).body;
-              });
-            <p id="result"></p>
-            //.then(result => alert(JSON.parse(result).body))
-            //.catch(error => console.log('error', error));
+            .then(result => alert(JSON.parse(result).body))
+            .catch(error => console.log('error', error));
         }
     </script>
 </head>
